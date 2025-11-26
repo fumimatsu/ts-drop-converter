@@ -6,6 +6,7 @@ TS ファイルをドラッグ＆ドロップするだけで、ffmpeg を使っ�
 - ffmpeg.exe を同じフォルダに置くだけのシンプル構成
 - `-c:v copy -c:a copy` による高速コピー変換（再エンコードなし）
 - 変換ログをウィンドウのテキストボックスに逐次表示
+- 配布物は self-contained ビルドのため、利用者は .NET ランタイム不要
 
 ## 使い方
 1. ffmpeg をインストールします（下記参照）。
@@ -37,7 +38,8 @@ dotnet build src/TsToMp4Dropper.sln -c Release
 
 ## 前提
 - Windows 環境
-- 実行時: .NET 6 デスクトップ ランタイム / 開発時: .NET 6 SDK
+- 利用者は .NET ランタイム不要（self-contained で配布するため）
+- 開発時: .NET 6 SDK が必要
 - ffmpeg.exe（外部で入手し、アプリと同じフォルダに配置）
 
 ## ライセンスと同梱ポリシー
